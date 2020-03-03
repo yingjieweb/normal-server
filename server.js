@@ -4,7 +4,7 @@ var url = require('url')
 var port = process.argv[2]
 
 if(!port){
-  console.log('请指定端口号好不啦？\nnode server.js 8888 这样不会吗？')
+  console.log('指定端口号不好吗？\nnode server.js 8888 这样不会吗？')
   process.exit(1)
 }
 
@@ -24,12 +24,15 @@ var server = http.createServer(function(request, response){
   if(path === '/'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write(`二哈`)
+    response.write(`
+      <link rel="stylesheet" href="/style">
+      <h1> hello erha</h1>
+    `)
     response.end()
-  } else if(path === '/x'){
+  } else if(path === '/style'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/css;charset=utf-8')
-    response.write(`body{color: red;}`)
+    response.write(`h1{color: red;}`)
     response.end()
   } else {
     response.statusCode = 404
