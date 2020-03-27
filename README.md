@@ -18,6 +18,6 @@ touch log `node src/server.js 8888 >log log 2>&1 &`
 
 ### node热部署
 
-安装 `npm install -g node-dev` 或者 `yarn global add node-dev`
-运行 `node-dev src/server.js 8888` 或者 `node-dev src/server 8888`
+1. 安装 `npm install -g node-dev` 或者 `yarn global add node-dev`
+2. 运行 `node-dev src/server.js 8888` 或者 `node-dev src/server 8888`
 
